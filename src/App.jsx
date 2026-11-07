@@ -447,7 +447,7 @@ function Navbar({ theme, onToggle }) {
 
 /* ============================ Hero ============================ */
 
-function Hero({ onPrint }) {
+function Hero() {
   const typed = useTypewriter(profile.roles)
   const [photoOk, setPhotoOk] = useState(true)
   const initials = profile.name
@@ -479,9 +479,9 @@ function Hero({ onPrint }) {
             </A>
           </Magnetic>
           <Magnetic>
-            <button className="btn btn-ghost" onClick={onPrint}>
+            <A href="/CV-Rifky-Ardiansyah.pdf" download className="btn btn-ghost">
               <Download size={18} /> Unduh PDF
-            </button>
+            </A>
           </Magnetic>
         </motion.div>
         <motion.div className="hero-social no-print" {...rise(1)}>
@@ -854,7 +854,7 @@ export default function App() {
       <div className="app">
         <Navbar theme={theme} onToggle={toggleTheme} />
         <main>
-          <Hero onPrint={() => window.print()} />
+          <Hero />
           <Marquee />
           <AboutSection />
           <SkillsSection />
