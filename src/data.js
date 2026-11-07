@@ -127,6 +127,7 @@ export const journey = [
   },
 ];
 
+// image = thumbnail (file di folder public/), kosongkan "" untuk memakai kotak gradien.
 // repo = link kode (GitHub), demo = link situs yang sudah di-deploy.
 // Biarkan "" kalau belum ada: tombolnya otomatis tidak ditampilkan.
 // hue = warna sampul (0-360), hue2 = warna kedua (opsional), featured = kartu besar.
@@ -136,6 +137,7 @@ export const projects = [
     kind: "Web + Mobile",
     desc: "Sistem informasi gym berbasis digital dengan empat peran (Admin, Trainer, Member, Guest): backend Laravel dan aplikasi mobile Flutter. Telah tercatat Hak Cipta (HKI) tahun 2026 sebagai karya tim.",
     tags: ["Laravel", "Flutter", "Midtrans", "HKI"],
+    image: "/proyek-ngegym.webp",
     repo: "", // repo masih privat, jadi tidak ditautkan
     demo: "",
     hue: 24,
@@ -146,6 +148,7 @@ export const projects = [
     kind: "Proyek Tim",
     desc: "Backend dan panel admin web SATU RUMAH untuk Disperwaskim Kota Tasikmalaya. Peran saya: Backend & Web Specialist (modul API dan web admin).",
     tags: ["Laravel", "Blade", "REST API"],
+    image: "/proyek-saturumah.webp",
     repo: "https://github.com/RifkyArdnsyh/Backend-SatuRumah",
     demo: "",
     hue: 215,

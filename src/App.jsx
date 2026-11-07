@@ -716,18 +716,31 @@ function ProjectsSection() {
       <Stagger className="proj-grid" amount={0.1}>
         {projects.map((p, i) => (
           <Spot key={p.name} className={`proj ${p.featured ? 'featured' : ''}`}>
-            <div className="proj-cover" style={{ '--h': p.hue, '--h2': p.hue2 ?? p.hue + 30 }}>
+            <div
+              className={`proj-cover ${p.image ? 'has-image' : ''}`}
+              style={{ '--h': p.hue, '--h2': p.hue2 ?? p.hue + 30 }}
+            >
               <span className="proj-no mono">{String(i + 1).padStart(2, '0')}</span>
-              <div className="mock" aria-hidden="true">
-                <span className="dots">
-                  <i />
-                  <i />
-                  <i />
-                </span>
-                <span className="l l1" />
-                <span className="l l2" />
-                <span className="l l3" />
-              </div>
+              {p.image ? (
+                <img
+                  className="proj-shot"
+                  src={p.image}
+                  alt={`Tampilan ${p.name}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <div className="mock" aria-hidden="true">
+                  <span className="dots">
+                    <i />
+                    <i />
+                    <i />
+                  </span>
+                  <span className="l l1" />
+                  <span className="l l2" />
+                  <span className="l l3" />
+                </div>
+              )}
             </div>
             <div className="proj-body">
               <span className="proj-meta mono">{p.kind}</span>
