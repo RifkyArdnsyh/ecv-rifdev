@@ -1503,3 +1503,9 @@ em {
 .proj:hover .proj-shot {
   transform: scale(1.04);
 }
+
+
+/* Sembunyikan nomor proyek di atas thumbnail agar tidak menutupi logo */
+.proj-cover.has-image .proj-no {
+  display: none;
+}
