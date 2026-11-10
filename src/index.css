@@ -229,7 +229,7 @@ em {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: max(14px, env(safe-area-inset-top)) 12px 0;
+  padding: clamp(14px, env(safe-area-inset-top, 0px), 28px) 12px 0;
   pointer-events: none;
 }
 
@@ -1187,7 +1187,7 @@ em {
   justify-content: space-between;
   gap: 0.8rem 1.5rem;
   margin-top: 4rem;
-  padding: 2rem 0 calc(2.5rem + env(safe-area-inset-bottom));
+  padding: 2rem 0 calc(2.5rem + min(env(safe-area-inset-bottom, 0px), 24px));
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 0.82rem;
@@ -1261,7 +1261,7 @@ em {
   .hero {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding-top: 6rem;
+    padding-top: 7rem;
     padding-bottom: 3rem;
     min-height: auto;
   }
@@ -1503,7 +1503,6 @@ em {
 .proj:hover .proj-shot {
   transform: scale(1.04);
 }
-
 
 /* Sembunyikan nomor proyek di atas thumbnail agar tidak menutupi logo */
 .proj-cover.has-image .proj-no {
